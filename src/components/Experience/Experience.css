@@ -1,0 +1,83 @@
+.experience__container{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+}
+.experience__container > div {
+    background: var(--color-bg-variant);
+    padding: 2.4rem 5rem;
+    border-radius: 2rem;
+    border: 1px solid transparent;
+    transition: var(--transition);
+}
+.experience__container > div:hover {
+    background: transparent;
+    border-color: var(--color-primary-variant);
+    cursor: default;
+}
+.experience__container > div h3{
+    text-align:center;
+    margin-bottom: 2rem;
+    color: var(--color-primary);
+}
+.experience__container {
+    display: grid;
+    grid-template-columns: 1fr 1fr ;
+    row-gap: 2rem; 
+}
+
+.experience__details{
+    display: flex;
+    gap: 1rem;
+}
+.experience__details-icon{
+    margin-top: 6px;
+    color: var(--color-primary);
+}
+
+/*=================================MEDIA QUERRIES (MEDIUM DEVICES)=================*/
+@media screen and (max-width: 1024px) {
+.experience__container{
+    grid-template-columns: 1fr;
+}
+.experience__container > div {
+    width: 80%;
+    padding: 2rem;
+    margin: 0 auto;
+}
+.experience__content{
+    padding: 1rem;
+}
+     }
+     
+     /*=================================MEDIA QUERRIES (SMALL DEVICES)=================*/
+@media screen and (max-width: 600px) {
+.experience__container{
+    gap: 1rem;
+
+}
+.experience__container > div {
+    width: 100%;
+    padding: 2rem 1rem;
+}
+     }
+
+     .experience__container > div {
+      position: relative;
+      overflow: hidden;
+    }
+    
+    .experience__container > div::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: radial-gradient(circle, #009688 0%, #00bcd4 40%, transparent 80%);
+      opacity: 0.8;
+      animation: flame-flicker 2s ease-in-out infinite;
+      z-index: -1;
+      box-shadow: 0 0 10px 10px #009688, 0 0 20px 20px #009688, 0 0 30px 30px #009688, 0 0 40px 40px #009688, 0 0 50px 50px #00bcd4, 0 0 60px 60px #00bcd4;
+    }
+    
